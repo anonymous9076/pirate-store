@@ -1,0 +1,87 @@
+.deals{
+    height: 20rem;
+    width: 98%;
+    background-color: #F24C3D;
+    border-radius: 10px;
+    margin: 0 1% 2% 1%;
+    position: relative;
+
+}
+.deals::after{
+    content: "";
+    height: 72%;
+    width: 1%;
+    background-color: #F24C3D;
+    padding:0;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 5%;
+    border-left: 2px solid grey;
+
+}
+.deals::before{
+    content: "";
+    height: 72%;
+    width: 1%;
+    background-color: #F24C3D;
+    padding:0;
+    position:absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 5%;
+    /* box-shadow:5px 0px 10px grey; */
+    border-right: 2px solid grey;
+
+}
+
+.deals>h2{
+    margin: 0;
+    padding:1% 0 2% 3%;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 900;
+    font-size: 2rem;
+}
+.deal-list{
+    height:70%;
+    padding: 0 1%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10 ,1fr);
+    grid-gap: 20px ;
+    margin-bottom: 2%;
+    position: relative;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.per-item{
+    height:inherit;
+    width: 100%;
+}
+.carousel-btns{
+    font-size: 2rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: grey;
+    position: absolute;
+    top: 20%;
+    z-index: 3;
+    height:80%;
+    width: 5%;
+}
+.carousel-btns:nth-child(4){
+    right:0;
+}
+.carousel-btns:nth-child(3){
+    left:0%;
+}
+.carousel-btns:hover{
+    color: black;
+    backdrop-filter: blur(5px);
+
+}
+
+
+/* https://youtu.be/6QE8dXq9SOE?si=1h9xqo29NThvf11e */

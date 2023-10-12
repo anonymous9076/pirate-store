@@ -1,0 +1,7 @@
+.like-btn{
+    outline: none;
+    border-style: none;
+    position: absolute;
+    background: transparent;
+    font-size: 1.3rem;
+}

@@ -1,0 +1,103 @@
+.login{
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.login-body{
+    min-height: 100vh;
+    background-image: url(./luffy2.png);
+    background: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.login-secA{
+    height: 27rem;
+    width: 27%;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px #454544 ;
+    border-radius: 20px;
+    color: white;
+    padding: 1%;
+}
+.login-secA>h2{
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 800;
+    color:#F24C3D;
+
+}
+.login-secA>label{
+    font-size: 1.3rem;
+    margin: 2% 0;
+    font-weight: 500;
+    color:#ffffff;
+
+}
+.login-secA>p{
+    margin: 2% 0;
+}
+.login-secA>p:hover{
+    color:#F24C3D;
+
+}
+.login-secA>h6{
+    color: black;
+    text-align: center;
+    margin: 7% 0 0 0 ;
+    padding: 0;
+}
+.login-secA>h5{
+  text-align: center;
+  margin-bottom:3%;
+}
+.login-secA>h5:hover{
+    color:#F24C3D;
+}
+.enter{
+    width: 100%;
+    height: 1.8rem;
+    border-radius: 2px ;
+    outline: none;
+    border-style: none;
+    padding: 0 2% ;
+    color: rgb(0, 0, 0);
+}
+.enter::placeholder{
+    color:rgb(169, 169, 169);
+}
+.login-btn{
+    height: 2rem;
+    width: 100%;
+    border-radius: 2px;
+    border-style: none;
+    margin: 3% 0;
+    color: white;
+    background-color: #F24C3D;
+    font-weight: 700;
+    letter-spacing:5px;
+}
+.login-btn:hover{
+    background-color: #f42310;
+    color: white;
+    box-shadow: 0px 0px 10px #454544 ;
+}
+.google-log{
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    border-radius: 2px;
+    background:#F24C3D;
+    color: white;
+    padding: 1%;
+}
+.google-log:hover{
+    background:#f42310;
+    color:white;
+}
+#tosignin{
+    color: white;
+    text-align:center;
+}
