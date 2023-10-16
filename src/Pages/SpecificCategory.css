@@ -1,0 +1,25 @@
+.sc {
+    display: flex;
+    color: whitesmoke;
+}
+
+.sc-filter {
+    height: fit-content;
+    width: 20%;
+    background-color: #F24C3D;
+    padding: 2%;
+}
+
+.sc-item-div {
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-gap: 5%;
+    padding: 2%;
+}
+.sc-filter>ul{
+    list-style:none ;
+    margin: 0;
+    padding: 0;
+}
+

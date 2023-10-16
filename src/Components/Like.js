@@ -15,7 +15,7 @@ const handleLike=()=>{
 
     return (
         <>
-        <button className="like-btn" type="submit" onClick={handleLike}>
+        <button className="like-btn" type="submit" title="Wishlist" onClick={handleLike}>
                 {like}
         </button>
         </>

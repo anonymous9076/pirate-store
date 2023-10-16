@@ -1,4 +1,4 @@
-.container {
+.ic1 {
     height:100%;
     width: 15rem;
     background-color: rgb(237, 237, 237);
@@ -8,30 +8,27 @@
     z-index: 1;
 
 }
-
-.container>img {
+.ic1>img {
     height: 65%;
     width: 100%;
     border-radius: 10px;
 }
-.item-name{
+.ic1-name{
     height: 12%;
     width: 100%;
     padding: 2%;
     overflow-y: hidden;
 }
-
-
-.item-price{
+.ic1-price{
     height: 15%;
     width: 100%;
 }
-.item-price>p{
+.ic1-price>p{
     margin: 0;
     padding: 0;
     text-align: right;
 }
-.item-price>p:nth-child(1){
+.ic1-price>p:nth-child(1){
     color:red;
     font-weight: 500;
     letter-spacing: 1px;

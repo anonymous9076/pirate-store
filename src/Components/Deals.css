@@ -5,7 +5,6 @@
     border-radius: 10px;
     margin: 0 1% 2% 1%;
     position: relative;
-
 }
 .deals::after{
     content: "";
@@ -18,7 +17,6 @@
     right: 0;
     bottom: 5%;
     border-left: 2px solid grey;
-
 }
 .deals::before{
     content: "";
@@ -32,7 +30,6 @@
     bottom: 5%;
     /* box-shadow:5px 0px 10px grey; */
     border-right: 2px solid grey;
-
 }
 
 .deals>h2{
@@ -80,8 +77,5 @@
 .carousel-btns:hover{
     color: black;
     backdrop-filter: blur(5px);
-
 }
 
-
-/* https://youtu.be/6QE8dXq9SOE?si=1h9xqo29NThvf11e */

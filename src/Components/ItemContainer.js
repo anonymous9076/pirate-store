@@ -4,13 +4,13 @@ import Like from './Like';
 function ItemContainer({ name,pic,price }) {
 
   return (
-    <div className='container'>
+    <div className='ic1'>
       <Like></Like>
       <img src={pic} alt='...'></img>
-      <div className='item-name'>
+      <div className='ic1-name'>
       {name}
       </div>
-      <div className='item-price'>
+      <div className='ic1-price'>
         <p>${price}</p>
         <p> <strike>${price+250}</strike></p>
       </div>
