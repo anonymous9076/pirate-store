@@ -26,7 +26,7 @@
     text-align: center;
     letter-spacing: 1px;
     font-weight: 800;
-    color: #F24C3D;
+    color: #6499E9;
 }
 .signin-secA>label{
     font-size: 1.3rem;
@@ -36,7 +36,7 @@
     margin: 2% 0;
 }
 .signin-secA>p:hover{
-    color:#F24C3D;
+    color:#6499E9;
 
 }
 .signin-secA>h6{
@@ -50,7 +50,7 @@
   margin:2%;
 }
 .signin-secA>h5:hover{
-    color:#F24C3D;
+    color:#6499E9;
 }
 .enter{
     width: 100%;
@@ -69,7 +69,7 @@
     color: white;
     font-weight: 700;
     letter-spacing:5px;
-    background-color: #F24C3D;
+    background-color: #6499E9;
 
 }
 .signin-btn:hover{

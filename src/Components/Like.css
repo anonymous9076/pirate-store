@@ -4,4 +4,6 @@
     position: absolute;
     background: transparent;
     font-size: 1.3rem;
+    z-index: 3;
+    right: 2%;
 }

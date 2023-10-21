@@ -4,14 +4,14 @@
     width: 100%;
     background-color: white;
     border-radius: 20px;
-    /* box-shadow: inset 5px 5px 10px #F24C3D,5px 5px 10px #F24C3D; */
+    /* box-shadow: inset 5px 5px 10px #6499E9,5px 5px 10px #6499E9; */
     cursor: pointer;
     user-select: none; 
     margin-bottom: .7%;
 }
 .category>ul{
     list-style: none;
-    color: #F24C3D;
+    color: #912e25;
     display: flex;
     justify-content: center;
     align-items: center;

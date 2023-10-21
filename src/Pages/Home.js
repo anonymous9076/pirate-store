@@ -7,6 +7,7 @@ import Deals from '../Components/Deals';
 function Home() {
     return (
         <div>
+          
             <Navbar></Navbar>
             <Carousel></Carousel>
             <Category></Category>
