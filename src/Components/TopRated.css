@@ -1,0 +1,14 @@
+.toprate-body{
+    background-color: #6499E9;
+    height: 20rem;
+    width: 100%;
+}
+.toprate-body>h2{
+    margin: 0;
+    height: 20%;
+    padding:1% 0 2% 3%;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 900;
+    font-size: 2rem;
+}

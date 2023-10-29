@@ -3,3 +3,12 @@
     width: 100%;
     
 }
+.cart-btn{
+    color: white;
+    background-color: #6499E9;
+}
+.cart-btn:hover{
+    background-color: #6499E9;
+    color: aliceblue;
+    font-weight: 700;
+}

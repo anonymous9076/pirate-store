@@ -1,9 +1,11 @@
 import React from 'react'
 import "./ItemContainer.css";
 import Like from './Like';
-function ItemContainer({ name,pic,price,dis }) {
+import { NavLink } from 'react-router-dom';
+function ItemContainer({ name,pic,price,dis,id }) {
 
   return (
+    <NavLink to={`/si/${id}`}  style={{textDecoration:'none',color:'black'}}>
     <div className='ic1'>
       <div className='ic1-discount'>{dis}%</div>
       <Like></Like>
@@ -19,6 +21,7 @@ function ItemContainer({ name,pic,price,dis }) {
         <p> <strike>${price}</strike></p>
       </div>
     </div>
+    </NavLink>
   )
 }
 

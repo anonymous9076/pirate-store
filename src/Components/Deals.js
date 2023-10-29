@@ -1,27 +1,11 @@
-
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useRef } from 'react';
 import './Deals.css';
 import ItemContainer from './ItemContainer';
-import axios from 'axios';
-
+import {DataContext} from '../Context/CreateContext'
 const Deals = () => {
-  const listRef = useRef(null);
-  const[DataApi,setDataApi]=useState([])
 
-  const getdata = async() => {
-    try{
-    const res=await axios.get('http://localhost:8080/products');
-    const data=res.data.products;
-    const filter=data.filter((i)=>i.discountPercentage>40
-    )
-    setDataApi(filter)}
-    catch(error){
-      console.log(error)
-    }
-  }
-useEffect(()=>{
-  getdata()
-})
+  const listRef = useRef(null);
+  const {filtereditem} = useContext(DataContext);
 
   const handleScroll = (direction) => {
     const scrollAmount = 253;
@@ -35,15 +19,17 @@ useEffect(()=>{
       }
     }
   };
+  
   return (
     <div className='deals'>
       <h2>Top Deals</h2>
       <div ref={listRef} id='list' className='deal-list'>
 
-        {DataApi.map((p,index) => (
+        {filtereditem.map((p, index) => (
           <div className='per-item' key={index}>
             <ItemContainer
-              name={p.title} 
+              name={p.title}
+              id={p.id}
               dis={p.discountPercentage}
               pic={p.thumbnail}
               price={p.price}>

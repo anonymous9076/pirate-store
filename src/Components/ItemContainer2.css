@@ -5,6 +5,20 @@
     padding: 2%;
     background-color: rgb(226, 226, 226);
     color: black;
+    position: relative;
+    overflow: hidden;
+}
+.ic2::before{
+    content: '';
+    height:inherit;
+    width:inherit;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    right: 100%;
+    border-radius: inherit;
+    transition:right .8s  ;
 }
 
 .ic2-img {
@@ -21,13 +35,9 @@
     transition: transform 1s;
    
 }
-.ic2-img>img:is(:hover, :focus) {
-    transform: scale(1.2);
-    border-radius: 10px;
-}
 .ic2-like{
   position: absolute;
-  right: 12%;
+  right: 0%;
   z-index: 2;
 }
 .ic2-title {
@@ -53,25 +63,34 @@
     position: absolute;
     right: 2%;
     width: 40%;
-    
+    height: 2rem;
 }
 .ic2-btn>button{
     height:inherit;
     width: 100%;
-    background-color: #F24C34;
+    background-color: #6499E9;
     border: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     box-shadow: 0px 0px 5px rgb(112, 112, 112);
     border-radius: 5px;
     font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
 
 }
 .ic2-btn>button:hover{
-    background-color: #e1290d;
+    background-color: #0f6df9;
 }
 
 .ic2-rating {
     width: 100%;
     height: 7%;
-
+}
+.ic2:hover::before{
+    right: 0;
+}
+.ic2:hover .ic2-img>img{
+    transform: scale(1.2);
+    border-radius: 10px;
 }

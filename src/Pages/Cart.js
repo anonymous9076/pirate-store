@@ -51,7 +51,7 @@ const [itemNum,setItemNum]=useState(1);
           </div>
           <div className="card">
           <div className="card-body">
-            <button type="button" className="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+            <button type="button" className="btn btn-block btn-lg cart-btn">Proceed to Pay</button>
           </div>
         </div>
         </div>

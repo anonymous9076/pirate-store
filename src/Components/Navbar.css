@@ -1,22 +1,24 @@
-.navbar{
-    height:5rem;
+.navbar {
+    height: 5rem;
     width: 100%;
     background-color: #6499E9;
     display: flex;
     margin-bottom: .5%;
-   padding: 0;
-   cursor: pointer;
-   box-shadow: inset 0px 0px 15px 1px rgb(255, 255, 255);
+    padding: 0;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 15px 1px rgb(255, 255, 255);
 }
-.nav-img{
-    height:inherit;
+
+.nav-img {
+    height: inherit;
     width: 8%;
     overflow: hidden;
     place-items: center;
     display: flex;
     padding-left: 1%;
 }
-.nav-title{
+
+.nav-title {
     height: inherit;
     width: 16%;
     place-items: center;
@@ -25,46 +27,52 @@
     font-weight: 500;
     font-size: 2rem;
     letter-spacing: 2px;
-    user-select: none; 
+    user-select: none;
 }
-.nav-searchbar{
+
+.nav-searchbar {
     height: inherit;
     width: 35%;
     display: flex;
     place-items: center;
-   justify-content: center;
+    justify-content: center;
 }
-#search{
+
+#search {
     height: 2.3rem;
     width: 90%;
-    border-radius: 10px 0 0 10px  ;
+    border-radius: 10px 0 0 10px;
     outline: none;
     padding: 0 3%;
     border-style: none;
 }
-#search-icon{
+
+#search-icon {
     background-color: white;
     height: 2.2rem;
     border-radius: 0 10px 10px 0;
     padding-right: 2%;
     font-size: 2rem;
 }
-#search-icon:hover{
+
+#search-icon:hover {
     color: grey;
 }
-.nav-cart{
+
+.nav-cart {
     color: white;
     display: flex;
-    place-items: center;
+    align-items: center;
     font-size: 1.3rem;
     font-weight: 400;
     width: 10%;
     height: inherit;
-   justify-content: center;
-   letter-spacing: 2px;
-   user-select: none; 
+    justify-content: center;
+    letter-spacing: 2px;
+    user-select: none;
 }
-.nav-category{
+
+.nav-category {
     color: white;
     display: flex;
     place-items: center;
@@ -72,13 +80,17 @@
     font-weight: 400;
     width: 11%;
     height: inherit;
-   justify-content: center;
-   position: relative;
-   letter-spacing: 2px;
-   user-select: none; 
+    justify-content: center;
+    position: relative;
+    letter-spacing: 2px;
+    user-select: none;
 }
 
-.nav-user{
+.nav-category:is(:hover, :focus) .cat-dropdown {
+    display: block;
+}
+
+.nav-user {
     color: white;
     display: flex;
     place-items: center;
@@ -86,12 +98,17 @@
     font-weight: 400;
     width: 10%;
     height: inherit;
-   justify-content: center;
-   position: relative;
-   letter-spacing: 2px;
-   user-select: none; 
+    justify-content: center;
+    position: relative;
+    letter-spacing: 2px;
+    user-select: none;
 }
-.nav-menu{
+
+.nav-user:is(:hover, :focus) .user-dropdown {
+    display: block;
+}
+
+.nav-menu {
     color: white;
     width: 7%;
     font-size: 3rem;
@@ -100,95 +117,141 @@
     justify-content: flex-end;
     margin-right: 3%;
     position: relative;
-    user-select: none; 
+    user-select: none;
 }
-.cat-dropdown{
+
+.nav-menu:is(:hover, :focus) .menu-dropdown {
+    display: block;
+}
+
+.cat-dropdown {
     background-color: #6499E9;
     height: 20rem;
     width: 14rem;
     position: absolute;
     color: white;
-    margin-top: 25.5rem;
+    margin-top: 24rem;
     border-radius: 10px;
     z-index: 3;
-    user-select: none; 
+    user-select: none;
     letter-spacing: normal;
+    display: none;
+    box-shadow: inset 0px 0px 15px 1px rgb(255, 255, 255);
+
 }
-.cat-dropdown>ul{
+
+.cat-dropdown>ul {
     margin: 10% 0;
     padding: 0;
 }
-.cat-dropdown>ul>li{
+
+.cat-dropdown>ul>li {
     height: 2.3rem;
     text-align: center;
     list-style: none;
-}
-.cat-dropdown>ul>li:hover{
-    font-size:1.5rem ;
-    cursor: pointer;
+    border-radius: 10px;
+    width: 95%;
+    margin: 1% auto;
+
 }
 
-.user-dropdown{
+.cat-dropdown>ul>li:hover {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #4c88e1;
+    box-shadow: inset 0px 0px 15px 1px rgb(255, 255, 255);
+}
+
+.user-dropdown {
     background-color: #6499E9;
-    height: 17rem;
+    height: fit-content;
     width: 10rem;
     position: absolute;
     color: white;
-    margin-top: 22.5rem;
-    border-radius: 10px ;
+    margin-top: 20rem;
+    border-radius: 10px;
     z-index: 3;
     letter-spacing: normal;
-    user-select: none; 
+    user-select: none;
+    display: none;
+    box-shadow: inset 0px 0px 15px 1px rgb(255, 255, 255);
+
 }
-.user-dropdown>ul{
+
+.user-dropdown>ul {
     margin: 12% 0;
-    padding: 0;
+    padding: 0 0 5% 0;
 }
-.user-dropdown>ul>li{
+
+.user-dropdown>ul>li {
     height: 2.5rem;
     text-align: center;
     list-style: none;
+    margin: 1% auto;
+    width: 95%;
+    border-radius:10px ;
 }
-.user-dropdown>ul>li:hover{
-    font-size:1.5rem ;
+
+.user-dropdown>ul>li:hover {
+    font-size: 1.5rem;
+    background-color: #4c88e1;
+    box-shadow: inset 0px 0px 15px 1px rgb(255, 255, 255);
+
 }
-.menu-dropdown{
+
+.menu-dropdown {
     background-color: #6499E9;
     position: absolute;
-    height: 32rem;
+    height: max-content;
     width: 15rem;
     font-size: 1.4rem;
-    margin-top: 35rem  ;
+    margin-top: 39rem;
     margin-right: -2.6rem;
     border-radius: 10px;
     text-align: center;
     z-index: 3;
-    user-select: none; 
+    user-select: none;
+    display: none;
+    box-shadow: inset 0px 0px 15px 1px rgb(255, 255, 255);
+
+
 }
-.menu-dropdown>ul{
+
+.menu-dropdown>ul {
     margin: 0;
-    padding: 0;
+    padding: 0 0 5% 0;
     height: 45%;
+    list-style: none;
 }
-.menu-dropdown>ul:nth-child(2)>li{
+.menu-dropdown>ul>li{
+    margin: 1% auto;
+    width: 95%;
+    border-radius: 10px;
+}
+.menu-dropdown>ul:nth-child(2)>li {
     height: 2rem;
     list-style: none;
 }
-.menu-dropdown>ul:nth-child(4)>li{
+
+.menu-dropdown>ul:nth-child(4)>li {
     height: 2rem;
     list-style: none;
 }
-.menu-dropdown>h5{
+
+.menu-dropdown>h5 {
     text-align: center;
     letter-spacing: 2px;
     font-weight: 600;
     font-size: 1.5rem;
-    margin:1rem 0 ;
+    margin: 1rem 0;
     color: whitesmoke;
     text-shadow: 2px 2px 5px black;
 }
-.menu-dropdown>ul>li:hover{
+
+.menu-dropdown>ul>li:hover {
     font-size: 1.6rem;
     text-shadow: 2px 2px 5px grey;
-    
+    background-color: #4c88e1;
+    box-shadow: inset 0px 0px 15px 1px rgb(255, 255, 255);
+
 }

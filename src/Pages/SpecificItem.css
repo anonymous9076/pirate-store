@@ -1,0 +1,94 @@
+.si-body {
+    height: 100dvh;
+    width: 100%;
+    padding: 2%;
+    display: flex;
+}
+
+.si-img {
+    height: 100%;
+    width: 70%;
+    background-color: rgb(201, 199, 199);
+    border-radius: 10px 0 0 10px;
+
+}
+
+.si-thumbnail {
+    height: 80%;
+    width: 100%;
+    background-color: rgb(222, 222, 222);
+    padding: 2%;
+    border-radius: 10px;
+
+}
+
+.si-thumbnail>img {
+    height: 100%;
+    width: inherit;
+    border-radius: 10px;
+}
+
+.si-alt-img {
+    width: 70%;
+    margin: auto;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1%;
+    overflow: hidden;
+}
+.si-alt-img:hover >img:not(:hover)  {
+    opacity:0.2;
+} 
+
+.si-alt-img>img {
+    height: 100%;
+    width: 20%;
+    border-radius: 10px;
+    transition: transform 1s;
+    border: 5px solid  rgb(222, 222, 222);
+}
+
+.si-alt-img>img:hover {
+    transform: scale(1.2);
+}
+
+.si-detail{
+    height:100%;
+    width:30%;
+    background-color: rgb(201, 199, 199);
+    padding: 2%;
+    border-radius: 0 10px 10px 0;
+
+}
+.si-detail>p:nth-child(5){
+    color: red;
+    padding: 0;
+    margin:0;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+.si-detail>p:nth-child(6){
+
+}
+.si-detail>b{
+    color: red;
+    font-size: 1.2rem;
+}
+
+.si-btns>button {
+    background-color: #6499E9;
+    border-style: none;
+    height: 3rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 1%;
+}
+.si-btns>button:hover{
+    font-size: 1.3rem;
+    background-color: #4b89e5;
+}

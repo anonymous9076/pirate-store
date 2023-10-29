@@ -11,7 +11,7 @@
 }
 .category>ul{
     list-style: none;
-    color: #912e25;
+    color: #ff1500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,14 +27,22 @@
     flex-direction: column;
     height:100%;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
+    position:relative;
 }
 .cat-img{
-    height:4rem ;
-    width:60%;
+    position: absolute;
+    height:5rem ;
+    width:80%;
     border-radius: 20px ;
+    transition: transform 1s;
+    filter: drop-shadow( 0px 0px 10px #6499E9 );
+    
 }
 .category>ul>li:hover{
-    box-shadow: inset 0px 0px 15px grey;
+    box-shadow: inset 0px 0px 15px 3px #6499E9;
     border-radius: 10px;
+}
+.cat-img:hover{
+    transform: rotateY(90deg);
 }

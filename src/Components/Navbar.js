@@ -5,20 +5,7 @@ import { BiCategory, BiSolidUser, BiMenu } from 'react-icons/bi'
 import {Link} from 'react-router-dom';
 
 function Navbar() {
-    const [catDrop,setcatDrop]=useState(false)
-    const [userDrop,setuserDrop]=useState(false)
-    const [menuDrop,setmenuDrop]=useState(false)
-
-    const handlecatEnter=()=>{
-        setcatDrop(!catDrop)
-    }
-    const handleuserEnter=()=>{
-        setuserDrop(!userDrop)
-    }
-    const handlemenu=()=>{
-        setmenuDrop(!menuDrop)
-    }
-   
+ 
     return (
         <div className='navbar'>
             <div className='nav-img'>
@@ -31,19 +18,22 @@ function Navbar() {
                 <input id='search' type="search" placeholder='Search'></input>
                 <BsSearch id='search-icon'></BsSearch>
             </div>
-            <div className='nav-cart'>
-                <button type="button" className="btn position-relative" style={{color:'white'}}>
+            <div className='nav-cart  '>
+            <Link to='/cart'  style={{textDecoration:'none',color:'white'}}> 
+                <button type="button" className="btn position-relative mb-2" style={{color:'white'}}>
                 <BsCart2></BsCart2> 
-                    <span className="position-absolute top-0 start-90 translate-middle badge rounded-pill ">
-                        
+                    <span className="position-absolute translate-middle badge rounded-pill mt-2 " style={{color:'red'}}>
+                        1
                         <span className="visually-hidden">unread messages</span>
                     </span>
                 </button>
                     cart
+            </Link>
             </div>
-            <div className='nav-category'  onClick={handlecatEnter} >
+
+            <div className='nav-category'   >
                 <BiCategory className='mx-2' ></BiCategory> categories
-                {catDrop? <div className='cat-dropdown'>
+                 <div className='cat-dropdown'>
                     <ul>
                         <li>Clothes</li>
                         <li>Posters</li>
@@ -53,13 +43,13 @@ function Navbar() {
                         <li>Action Figures</li>
                         <li>Katanas</li>
                     </ul>
-                </div>:''
-                }
+                </div>
+                
                
             </div>
-            <div className='nav-user' onClick={handleuserEnter} >
+            <div className='nav-user'  >
                 <BiSolidUser className='mx-2'></BiSolidUser>  user
-                {userDrop?
+                
                 <div className='user-dropdown'>
                     <ul>
                         <li><Link style={{textDecoration:'none', color:'white'}} to="/login">Login</Link></li>
@@ -68,24 +58,27 @@ function Navbar() {
                         <li>Help</li>
                         <li>Contact us</li>
                     </ul>
-                </div>:''}
+                </div>
 
             </div>
-            <div className='nav-menu' onClick={handlemenu}>
+            <div className='nav-menu'>
                 <BiMenu></BiMenu>
-                {menuDrop?
+               
                 <div className='menu-dropdown'>
                     <h5>Menu</h5>
+                    <hr></hr>
                     <ul>
-                        <li>Home</li>
+                        <li><Link to='/' style={{textDecoration:'none', color:'white'}}>Home</Link></li>
                         <li>Wishlist</li>
                         <li>My Order</li>
-                        <li>My Cart</li>
+                        <li><Link to='/cart' style={{textDecoration:'none', color:'white'}}>My Cart</Link></li>
                         <li>My Address</li>
                         <li>Category</li>
                         <li>Best Seller</li>
                     </ul>
                     <h5>Help & Support</h5>
+                    <hr></hr>
+
                     <ul>
                         <li>Support</li>
                         <li>About</li>
@@ -93,7 +86,7 @@ function Navbar() {
                         <li>Need Help</li>
                     </ul>
                 </div>
-                    :''}
+                    
             </div>
 
         </div>
