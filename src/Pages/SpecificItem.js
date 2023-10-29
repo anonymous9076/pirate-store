@@ -23,7 +23,7 @@ function SpecificItem() {
     } = singleitem
     useEffect(() => {
         singleItemData(`http://localhost:8080/items/id=${id}`)
-    }, [])
+    }, [id])
 
     if(isLoading){
         return(

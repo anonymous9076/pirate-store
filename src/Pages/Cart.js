@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Cart.css'
 
 function Cart() {
-const [itemNum,setItemNum]=useState(1);
+// const [itemNum,setItemNum]=useState(1);
 
-  const handleItemNum=(side)=>{
-      if(side=='up'){
-        setItemNum(itemNum+1)
-      }
-      if(side=='down'){
-        setItemNum(itemNum-1)
-      }
-  }
+  // const handleItemNum=(side)=>{
+  //     if(side=='up'){
+  //       setItemNum(itemNum+1)
+  //     }
+  //     if(side=='down'){
+  //       setItemNum(itemNum-1)
+  //     }
+  // }
 
   return (
     <div>

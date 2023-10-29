@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Navbar.css"
 import { BsSearch, BsCart2 } from 'react-icons/bs'
 import { BiCategory, BiSolidUser, BiMenu } from 'react-icons/bi'
