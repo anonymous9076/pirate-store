@@ -1,6 +1,6 @@
 export default function FilterDataReducer(state, action) {
-    let entervalue = document.getElementById("sort")
-    let type = entervalue.value
+    let type;
+    let entervalue
     switch (action.type) {
 
         case "GET_DATA":
@@ -10,6 +10,8 @@ export default function FilterDataReducer(state, action) {
                 allData: [...action.payload]
             }
         case "SORT_VALUE":
+            entervalue = document.getElementById("sort")
+            type = entervalue.value
             return {
                 ...state,
                 sortValue: type
@@ -46,38 +48,44 @@ export default function FilterDataReducer(state, action) {
 
         case "FILTER_DATA":
             let tempData = [...state.allData]
-            entervalue.value = "none"
-            const { category,price } = state.Filter
+            const { category, price } = state.Filter
+
             if (category) {
-                if(category==="ALL")
-                {
+                if (category !== "ALL") {
+                    tempData = tempData.filter((p) => p.category === category)
                     return {
                         ...state,
                         filterData: tempData
                     }
                 }
-                else{
-                tempData = tempData.filter((p) => p.category === category)
-                return {
-                    ...state,
-                    filterData: tempData
+            }
+
+            if (price) {
+                if (price != 1001) {
+                    tempData = [...state.allData]
+                    tempData = tempData.filter((p) => p.price <= price)
+                    return {
+                        ...state,
+                        filterData: tempData
+                    }
                 }
-            }}
-            if(price){
-                console.log('uo')
-                tempData = state.filterData.filter((p) => p.price <=price)
-                return {
-                    ...state,
-                    filterData: tempData
+                else {
+                    tempData = [...state.allData]
+                    tempData = tempData.filter((p) => p.price >= price)
+                    return {
+                        ...state,
+                        filterData: tempData
+                    }
                 }
             }
-            return{
+
+            return {
                 ...state,
                 filterData: [...state.allData]
             }
 
         case "RESET_ALL":
-            entervalue.value = "none"
+            type = "none"
             return {
                 ...state,
                 filterData: [...state.allData],

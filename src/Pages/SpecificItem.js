@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect,useState } from 'react'
 import './SpecificItem.css'
 import { useParams } from 'react-router-dom'
 import {DataContext} from '../Context/CreateContext.js'
@@ -21,14 +21,20 @@ function SpecificItem() {
         stock,
         images
     } = singleitem
+    const [showImg,setShowImg]=useState()
     useEffect(() => {
         singleItemData(`http://localhost:8080/items/id=${id}`)
-    }, [id,singleItemData])
+    }, [])
+    
 
     if(isLoading){
         return(
-            <h2>loading plz wait</h2>
+            <h2 style={{textAlign:'center'}}>loading plz wait</h2>
         )
+    }
+    const handleChangeImg=(p,event)=>{
+        event.stopPropagation()
+        setShowImg(p)
     }
 
     return (
@@ -37,12 +43,14 @@ function SpecificItem() {
             <div className='si-body'>
                 <div className='si-img'>
                     <div className='si-thumbnail'>
-                        <img src={thumbnail} alt='...'></img>
+                        {showImg ? <img src={showImg} alt='...'></img>
+                        : <img src={thumbnail} alt='...'></img>}
+                       
                     </div>
                     {images ?
                     <div className='si-alt-img'>
                         {images.map((p,index)=>
-                        <img src={p} alt='...' key={index}></img>)}
+                        <img src={p} alt='...' key={index} onClick={(event)=>handleChangeImg(p,event)}></img>)}
                     </div>:""}  
                     </div>
                 <div className='si-detail'>

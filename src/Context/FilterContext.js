@@ -10,8 +10,8 @@ const FilterContext = (props) => {
         allData: [],
         sortValue: '',
         Filter: {
-            category: 'all',
-            price: 'all',
+            category: '',
+            price: '',
             rating: '',
             discount: ''
         }
@@ -31,7 +31,9 @@ const FilterContext = (props) => {
     }, [orignaldata]);
 
 
-    const sorting = () => {
+    const sorting = (event) => {
+        event.stopPropagation()
+
         dispatch({ type: 'SORT_VALUE' });
     };
 
@@ -40,9 +42,10 @@ const FilterContext = (props) => {
     }
 
     const handleFilterAll = (event) => {
+        event.stopPropagation()
         let name = event.target.name
         let value = event.target.value
-        dispatch({ type: "UPDATE_FILTER_DATA", payload: { name, value } })
+        dispatch({ type:"UPDATE_FILTER_DATA", payload: { name, value } })
     }
 
     return (
