@@ -23,7 +23,7 @@ function SpecificItem() {
     } = singleitem
     useEffect(() => {
         singleItemData(`http://localhost:8080/items/id=${id}`)
-    }, [id])
+    }, [id,singleItemData])
 
     if(isLoading){
         return(
@@ -54,7 +54,7 @@ function SpecificItem() {
                     <strike>M.R.P : ₹{Math.round(((100 / discountPercentage) + price))} </strike>
                     <p>Inclusive all taxes</p>
                     <hr></hr>
-
+                    <p>Category : {category}</p>        
                     <p> In Stock : {stock} </p>
                     <div className='si-btns'>
                         <button>add to cart</button>
