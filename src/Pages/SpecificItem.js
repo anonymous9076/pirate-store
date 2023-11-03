@@ -1,13 +1,17 @@
 import React, { useContext, useEffect,useState } from 'react'
 import './SpecificItem.css'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import {DataContext} from '../Context/CreateContext.js'
 import RatingStars from '../Components/RatingStars'
 import Navbar from '../Components/Navbar'
+import CartItemBtn from '../Components/CartItemBtn'
+import {CartDataContext} from '../Context/CreateContext.js'
 
 function SpecificItem() {
 
     const { singleItemData,singleitem,isLoading } = useContext(DataContext)
+    const {addtocart}=useContext(CartDataContext)
+    const [NoOfItem,setNoOfItem]=useState(1)
     const { id } = useParams();
     //its like props that we get from context
     const {
@@ -35,6 +39,12 @@ function SpecificItem() {
     const handleChangeImg=(p,event)=>{
         event.stopPropagation()
         setShowImg(p)
+    }
+    const setDecrease=()=>{
+        NoOfItem>1?setNoOfItem(NoOfItem-1):setNoOfItem(1);
+    }
+    const setIncrease=()=>{
+        NoOfItem<stock?setNoOfItem(NoOfItem+1):setNoOfItem(stock)
     }
 
     return (
@@ -64,9 +74,16 @@ function SpecificItem() {
                     <hr></hr>
                     <p>Category : {category}</p>        
                     <p> In Stock : {stock} </p>
+                    <div className="si_item_selector">
+                           <CartItemBtn
+                           NoOfItem={NoOfItem}
+                           setDecrease={setDecrease}
+                           setIncrease={setIncrease}
+                           ></CartItemBtn>
+                        </div>
                     <div className='si-btns'>
-                        <button>add to cart</button>
-                        <button>buy now</button>
+                        <NavLink to='/cart' onClick={()=>addtocart(id,stock,NoOfItem,singleitem)}><button id='si_btn'>add to cart</button></NavLink>
+                        <button id='si_btn'>buy now</button>
                     </div>
                 </div>
             </div>

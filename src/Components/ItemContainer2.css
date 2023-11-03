@@ -1,14 +1,14 @@
 .ic2 {
     width: 100%;
-    height: 25rem;
+    height: 20rem;
     border-radius: 10px;
-    padding: 2%;
+    padding: 3%;
     background-color: rgb(226, 226, 226);
     color: black;
     position: relative;
     overflow: hidden;
 }
-.ic2::before{
+/* .ic2::before{
     content: '';
     height:inherit;
     width:inherit;
@@ -19,7 +19,7 @@
     right: 100%;
     border-radius: inherit;
     transition:right .8s  ;
-}
+} */
 
 .ic2-img {
     height: 70%;
@@ -87,10 +87,11 @@
     width: 100%;
     height: 7%;
 }
-.ic2:hover::before{
+/* .ic2:hover::before{
     right: 0;
-}
+} */
 .ic2:hover .ic2-img>img{
     transform: scale(1.2);
     border-radius: 10px;
+    
 }

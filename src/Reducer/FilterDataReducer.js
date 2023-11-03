@@ -1,14 +1,20 @@
 export default function FilterDataReducer(state, action) {
     let type;
-    let entervalue
+    let entervalue;
     switch (action.type) {
+
+        // get all data 
 
         case "GET_DATA":
             return {
                 ...state,
                 filterData: [...action.payload],
-                allData: [...action.payload]
+                allData: [...action.payload],
+
             }
+
+        // for sorting the data in order=>
+
         case "SORT_VALUE":
             entervalue = document.getElementById("sort")
             type = entervalue.value
@@ -36,8 +42,36 @@ export default function FilterDataReducer(state, action) {
                 ...state,
                 filterData: state.filterData.sort((a, b) => b.title.localeCompare(a.title))
             }
+
+        //it is for brand becoz of select option i have make it seprate
+
+        case "UPDATE_BRAND_DATA":
+            const brand = action.payload
+            if (brand !== 'ALL')
+                return {
+                    ...state,
+                    filterData: state.filterData.filter((p) => p.brand === brand)
+                }
+            return {
+                ...state,
+                filterData: [...state.allData]
+            }
+
+        // filter by price
+
+        case "UPDATE_PRICE_DATA":
+            const { minvalue, maxvalue } = action.payload
+            const array = state.allData.filter((p) => (p.price >= minvalue) & (p.price <= maxvalue))
+            return {
+                ...state,
+                filterData: [...array]
+            }
+
+        // for filter critaria
+
         case "UPDATE_FILTER_DATA":
             const { name, value } = action.payload
+
             return {
                 ...state,
                 Filter: {
@@ -46,10 +80,12 @@ export default function FilterDataReducer(state, action) {
                 }
             }
 
-        case "FILTER_DATA":
-            let tempData = [...state.allData]
-            const { category, price } = state.Filter
 
+        case "FILTER_DATA":
+            let tempData = action.payload
+            let { category, rating } = state.Filter
+
+            //  filter by category 
             if (category) {
                 if (category !== "ALL") {
                     tempData = tempData.filter((p) => p.category === category)
@@ -60,21 +96,13 @@ export default function FilterDataReducer(state, action) {
                 }
             }
 
-            if (price) {
-                if (price != 1001) {
-                    tempData = [...state.allData]
-                    tempData = tempData.filter((p) => p.price <= price)
+            // filter by rating
+
+            if (rating) {
+                if (rating !== " ") {
                     return {
                         ...state,
-                        filterData: tempData
-                    }
-                }
-                else {
-                    tempData = [...state.allData]
-                    tempData = tempData.filter((p) => p.price >= price)
-                    return {
-                        ...state,
-                        filterData: tempData
+                        filterData: tempData.filter((p) => Math.round(p.rating) == rating)
                     }
                 }
             }
@@ -83,13 +111,20 @@ export default function FilterDataReducer(state, action) {
                 ...state,
                 filterData: [...state.allData]
             }
+        //reset all
 
         case "RESET_ALL":
-            type = "none"
+
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach((radioButton) => {
+            radioButton.checked = false;
+            
+            const sortbtn=document.getElementById('sort')
+            sortbtn.value="none"
+            });
             return {
                 ...state,
                 filterData: [...state.allData],
-
             }
 
         default:

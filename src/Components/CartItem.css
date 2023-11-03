@@ -1,0 +1,128 @@
+.card-body {
+    height: 10rem;
+    display: flex;
+}
+
+.cart_item_img {
+    height: 100%;
+    width: 20%;
+}
+
+.cart_item_img>img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+    border: 5px solid rgb(192, 191, 191);
+}
+
+.cart_title {
+    height: 100%;
+    padding: 2%;
+    width: 20%;
+}
+
+.cart_title>p:nth-child(1) {
+    font-size: 1.3rem;
+    font-weight: 500;
+    max-height: 80%;
+    height: fit-content;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.cart_price {
+    height: 100%;
+    width: 20%;
+    place-items: center;
+    display: flex;
+}
+
+.cart_price>h5 {
+    width: 100%;
+    text-align: center;
+}
+
+.cart_selector {
+    height: 100%;
+    width: 15%;
+    place-items: center;
+    display: flex;
+
+}
+
+.cart_input>input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-style: none;
+    text-align: center;
+    border: 5px solid #6499E9;
+}
+
+.cart_input {
+    width: 100%;
+    height: 35%;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.cart_input>span {
+    position: absolute;
+    padding-bottom: 3%;
+    width: 20%;
+    height: 100%;
+    display: grid;
+    top: 0;
+    font-size: 25px;
+    place-content: center;
+}
+
+.cart_input>span:nth-child(2) {
+    right: 0;
+    padding-top: 1%;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #6499E9;
+}
+
+.cart_input>span:nth-child(3) {
+    left: 0;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #6499E9;
+}
+
+.cart_input>input:is(:hover, :focus) {
+    outline: none;
+}
+
+.cart_input>span:hover {
+    background-color: #4b89e5;
+    color: rgb(210, 210, 210)
+}
+
+.cart_setted_price {
+    height: 100%;
+    width: 20%;
+    padding: 2%;
+    place-items: center;
+    display: flex;
+}
+
+.cart_setted_price>h5 {
+    width: 100%;
+    text-align: center;
+}
+
+.cart_item_remove {
+    width: 5%;
+    height: 100%;
+    place-items: center;
+    display: flex;
+    padding-bottom: 1.6%;
+}
+
+.text-danger:hover {
+    transform: scale(1.3);
+}

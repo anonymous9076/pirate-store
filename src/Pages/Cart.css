@@ -12,3 +12,14 @@
     color: aliceblue;
     font-weight: 700;
 }
+.total_pay{
+    height:15rem;
+    background-color: rgb(205, 205, 205);
+    position: relative;
+    border-style: none;
+}
+.total_pay>button{
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+}

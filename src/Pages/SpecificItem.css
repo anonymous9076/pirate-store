@@ -8,7 +8,7 @@
 .si-img {
     height: 100%;
     width: 70%;
-    background-color: rgb(201, 199, 199);
+    /* background-color: rgb(201, 199, 199); */
     border-radius: 10px 0 0 10px;
 
 }
@@ -16,7 +16,7 @@
 .si-thumbnail {
     height: 80%;
     width: 100%;
-    background-color: rgb(222, 222, 222);
+    /* background-color: rgb(222, 222, 222); */
     padding: 2%;
     border-radius: 10px;
     box-shadow:inset 0px 0px 10px 1px grey;
@@ -59,9 +59,9 @@
 }
 
 .si-detail{
-    height:100%;
+    height:fit-content;
     width:30%;
-    background-color: rgb(201, 199, 199);
+    /* background-color: rgb(201, 199, 199); */
     padding: 2%;
     border-radius: 0 10px 10px 0;
 
@@ -84,19 +84,29 @@
     font-size: 1.2rem;
 }
 
-.si-btns>button {
-    background-color: #6499E9;
+
+#si_btn{
+    background-color: #6499E9 ;
     border-style: none;
-    height: 3rem;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border-radius: 10px;
-    width: 100%;
-    text-align: center;
+    height: 3rem ;
+    color: white ;
+    font-size: 1.2rem ;
+    font-weight: 600 ;
+    border-radius: 10px ;
+    width: 100% ;
+    text-align: center ;
     margin: 1%;
 }
-.si-btns>button:hover{
+#si_btn:hover{
     font-size: 1.3rem;
     background-color: #4b89e5;
+}
+
+.si_item_selector{
+    height: 100%;
+    width: 25%;
+    place-items: center;
+    display: flex;
+    user-select: none;
+    margin: 2% 0;
 }

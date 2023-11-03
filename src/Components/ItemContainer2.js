@@ -20,7 +20,7 @@ function ItemContainer2({ name, price, rating, img, discount, id }) {
                 </div>
                 <NavLink to={`/si/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
                     <div className='ic2-btn'>
-                        <button>View Item</button>
+                        <button>View</button>
                     </div>
                 </NavLink>
             </div>
