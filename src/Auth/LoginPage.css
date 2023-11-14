@@ -26,8 +26,8 @@
     text-align: center;
     letter-spacing: 1px;
     font-weight: 800;
-    color:#6499E9;
-
+    color:rgb(29, 58, 133);
+    text-shadow: 5px 4px 5px white;
 }
 .login-secA>label{
     font-size: 1.3rem;
@@ -40,7 +40,7 @@
     margin: 2% 0;
 }
 .login-secA>p:hover{
-    color:#6499E9;
+    color:rgb(29, 58, 133);
 
 }
 .login-secA>h6{
@@ -54,7 +54,7 @@
   margin-bottom:3%;
 }
 .login-secA>h5:hover{
-    color:#6499E9;
+    color:rgb(29, 58, 133);
 }
 .enter{
     width: 100%;
@@ -75,7 +75,7 @@
     border-style: none;
     margin: 3% 0;
     color: white;
-    background-color: #6499E9;
+    background-color: rgb(29, 58, 133);
     font-weight: 700;
     letter-spacing:5px;
 }
@@ -89,7 +89,7 @@
     height: 2rem;
     text-align: center;
     border-radius: 2px;
-    background:#6499E9;
+    background:rgb(29, 58, 133);
     color: white;
     padding: 1%;
 }
@@ -100,4 +100,16 @@
 #tosignin{
     color: white;
     text-align:center;
+}
+
+@media screen and (max-width:480px) {
+    .login-secA{
+        height: 27rem;
+        width: 90%;
+        backdrop-filter: blur(5px);
+        box-shadow: 0px 0px 10px #454544 ;
+        border-radius: 20px;
+        color: white;
+        padding: 5%;
+    }
 }

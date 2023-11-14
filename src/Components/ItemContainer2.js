@@ -15,9 +15,9 @@ function ItemContainer2({ name, price, rating, img, discount, id }) {
             <div className='ic2-title'>{name}</div>
             <div className='ic2-rating'>Rating :  <span><RatingStars star={Math.round(rating)} size="small"></RatingStars></span></div>
             <div className='ic2-price'>
-                <div>
+               {price ?  <div>
                     <strike>$ {Math.round(((100 / discount) + price))} </strike> <b>$ {price}</b>
-                </div>
+                </div>:''}
                 <NavLink to={`/si/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
                     <div className='ic2-btn'>
                         <button>View</button>

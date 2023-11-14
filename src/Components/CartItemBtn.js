@@ -1,15 +1,12 @@
 import React from 'react'
-
-function CartItemBtn({NoOfItem,setDecrease,setIncrease}) {
+import './CartItemBtn.css'
+function CartItemBtn({amount,setDecrease,setIncrease}) {
   //isdi sari css cart vale page ta and specificcat ch hai
     return (
-
-    <div> 
-        <div className='cart_input'>
-    <input name="quantity" value={NoOfItem} type="text"/>
+    <div className='cart_input'>
+    <div>{amount}</div>
     <span title='Dec' onClick={()=>setDecrease()}>{'<'}</span>
     <span title='Inc' onClick={()=>setIncrease()}>{'>'}</span>
-    </div>
     </div>
   )
 }

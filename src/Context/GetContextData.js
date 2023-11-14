@@ -10,7 +10,8 @@ const GetContextData = (props) => {
         sorteditem: [],
         isLoading: false,
         isError: false,
-        singleitem: ''
+        singleitem: '',
+        toprated:[]
     }
     const [state, dispatch] = useReducer(reducer, initializer);
 

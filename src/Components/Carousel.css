@@ -1,13 +1,25 @@
-.carousel{
-    /* background-image: url("C:\Users\DELL\Desktop\react\pirate\public\img\ship.jpg"); */
+.carousel {
     background-color: rgb(255, 255, 255);
     background-size: cover;
     width: 90%;
     height: 100%;
-    margin: auto;
+    margin: 1% auto;
     border-radius: 20px;
 }
-.carousel-inner{
+
+.carousel-inner {
     border-radius: 20px;
+
+}
+
+@media screen and (max-width:480px) {
+    .carousel {
+        width: 100%;
+        margin: 2% auto;
+        border-radius: 0;
+    }
+    .carousel-inner {
+        border-radius: 0;
     
+    }
 }

@@ -14,12 +14,35 @@
 }
 .total_pay{
     height:15rem;
-    background-color: rgb(205, 205, 205);
+    background-color: rgb(255, 255, 255);
     position: relative;
-    border-style: none;
+    border: 1px solid rgb(211, 211, 211);
 }
 .total_pay>button{
     width: 100%;
+    border-radius: inherit;
     position: absolute;
-    bottom: 1%;
+    bottom: 0;
+}
+.price_bold{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.cart-total{
+    width: 100%;
+    padding:1% 2%;
+    display: flex;
+    justify-content:space-between ;
+}
+.cart_shop_btn{
+    background-color: #6499E9;
+    border-style: none;
+    border-radius: 5%;
+    color: white;
+    height: 3rem;
+    margin: 0 0 2% 2%;
+    width: fit-content;
+}
+.cart_shop_btn:hover{
+    font-size: 1.2rem;
 }

@@ -1,0 +1,9 @@
+
+.ic3-img>img{
+    height: 8rem;
+    width: 11rem;
+    border: .5rem solid rgb(214, 214, 214);
+    border-radius:0 15% 0 15%;
+    overflow: hidden;
+  
+}

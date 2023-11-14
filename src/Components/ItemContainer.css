@@ -1,5 +1,5 @@
 .ic1 {
-    height:18rem;
+    height:17rem;
     width: 15rem;
     background-color: rgb(237, 237, 237);
     border-radius: 10px;
@@ -20,7 +20,7 @@
     z-index: 3;
 }
 .ic1-img-handle{
-    height: 65%;
+    height: 78%;
     width: 100%;
     overflow: hidden;
     display:flex;
@@ -34,31 +34,13 @@
     transition: transform 1s;
 }
 .ic1-name{
-    height: 12%;
+    height: fit-content;
     width: 100%;
     padding: 2%;
     overflow-y: hidden;
 }
+.ic1-name~p{
+    padding-left: 2%;
+}
 
-.ic1-price{
-    display: inline;
-    height: 15%;
-    width: 30%;
-    position: relative;
-}
-.ic1-price>p{
-    margin: 0;
-    padding: 0;
-    text-align: right;
-}
-.ic1-price>p:nth-child(1){
-    color:red;
-    font-weight: 500;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-}
-.ic1-img-handle>img:hover{
-    transform: scale(1.2);
-
-}
 

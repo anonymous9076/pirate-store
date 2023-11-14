@@ -11,8 +11,8 @@ function SpecificItem() {
 
     const { singleItemData,singleitem,isLoading } = useContext(DataContext)
     const {addtocart}=useContext(CartDataContext)
-    const [NoOfItem,setNoOfItem]=useState(1)
     const { id } = useParams();
+    const [amount,setamount]=useState(1)
     //its like props that we get from context
     const {
         title,
@@ -25,28 +25,28 @@ function SpecificItem() {
         stock,
         images
     } = singleitem
+
     const [showImg,setShowImg]=useState()
     useEffect(() => {
         singleItemData(`http://localhost:8080/items/id=${id}`)
     }, [])
     
+    const handleChangeImg=(p,event)=>{
+        event.stopPropagation()
+        setShowImg(p)
+    }
+    const setDecrease=()=>{
+        amount>1?setamount(amount-1):setamount(1)
+    }
+    const setIncrease=()=>{
+        amount<stock?setamount(amount+1):setamount(stock)
+    }
 
     if(isLoading){
         return(
             <h2 style={{textAlign:'center'}}>loading plz wait</h2>
         )
     }
-    const handleChangeImg=(p,event)=>{
-        event.stopPropagation()
-        setShowImg(p)
-    }
-    const setDecrease=()=>{
-        NoOfItem>1?setNoOfItem(NoOfItem-1):setNoOfItem(1);
-    }
-    const setIncrease=()=>{
-        NoOfItem<stock?setNoOfItem(NoOfItem+1):setNoOfItem(stock)
-    }
-
     return (
         <div>
             <Navbar></Navbar>
@@ -76,13 +76,13 @@ function SpecificItem() {
                     <p> In Stock : {stock} </p>
                     <div className="si_item_selector">
                            <CartItemBtn
-                           NoOfItem={NoOfItem}
+                           amount={amount}
                            setDecrease={setDecrease}
                            setIncrease={setIncrease}
                            ></CartItemBtn>
                         </div>
                     <div className='si-btns'>
-                        <NavLink to='/cart' onClick={()=>addtocart(id,stock,NoOfItem,singleitem)}><button id='si_btn'>add to cart</button></NavLink>
+                        <NavLink to='/cart' onClick={()=>addtocart(id,stock,amount,singleitem)}><button id='si_btn'>add to cart</button></NavLink>
                         <button id='si_btn'>buy now</button>
                     </div>
                 </div>

@@ -26,7 +26,9 @@
     text-align: center;
     letter-spacing: 1px;
     font-weight: 800;
-    color: #6499E9;
+    color: rgb(29, 58, 133);
+    text-shadow: 5px 4px 5px white;
+
 }
 .signin-secA>label{
     font-size: 1.3rem;
@@ -36,7 +38,7 @@
     margin: 2% 0;
 }
 .signin-secA>p:hover{
-    color:#6499E9;
+    color:rgb(29, 58, 133);
 
 }
 .signin-secA>h6{
@@ -50,7 +52,7 @@
   margin:2%;
 }
 .signin-secA>h5:hover{
-    color:#6499E9;
+    color:rgb(29, 58, 133);
 }
 .enter{
     width: 100%;
@@ -69,7 +71,7 @@
     color: white;
     font-weight: 700;
     letter-spacing:5px;
-    background-color: #6499E9;
+    background-color: rgb(29, 58, 133);
 
 }
 .signin-btn:hover{
@@ -82,4 +84,16 @@
     text-align: center;
     text-decoration: none;
     
+}
+
+@media screen and (max-width:480px) {
+    .signin-secA{
+        height: 27rem;
+        width: 90%;
+        backdrop-filter: blur(5px);
+        box-shadow: 0px 0px 10px #454544 ;
+        border-radius: 20px;
+        color: white;
+        padding: 5%;
+    }
 }

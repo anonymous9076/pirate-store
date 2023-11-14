@@ -43,12 +43,23 @@ const FilterContext = (props) => {
         dispatch({ type: "RESET_ALL" })
     }
 
-    const handleFilterAll = (event) => {
+    const handleFilterAll = (event,n,val) => {
         event.stopPropagation()
+        console.log(n,val)
+        if(val){
+            let name=n
+            let value=val
+            dispatch({ type:"UPDATE_FILTER_DATA", payload: { name, value } })
+
+        }
+        else{
+
         let name = event.target.name
         let value = event.target.value
         dispatch({ type:"UPDATE_FILTER_DATA", payload: { name, value } })
+        }
     }
+
     const handleBrandFilter=(event)=>{
         event.stopPropagation()
         let value = event.target.value
@@ -60,11 +71,15 @@ const FilterContext = (props) => {
         let minvalue = event.target.min
         let maxvalue = event.target.max
         dispatch({ type:"UPDATE_PRICE_DATA", payload: {minvalue,maxvalue} })
+        
+    }
+    const handlePrice=(min,max)=>{
+        dispatch({ type:"UPDATE_PRICE_DATA", payload: {min,max} })
 
     }
 
     return (
-        <FilterDataContext.Provider value={{ ...state, sorting, handleFilterPrice,handleReset, handleFilterAll,handleBrandFilter }}>
+        <FilterDataContext.Provider value={{ ...state,handlePrice, sorting, handleFilterPrice,handleReset, handleFilterAll,handleBrandFilter }}>
             {props.children}
         </FilterDataContext.Provider>
     )

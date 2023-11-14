@@ -1,14 +1,22 @@
 .toprate-body{
-    background-color: #6499E9;
-    height: 20rem;
+    height: 47rem;
     width: 100%;
+    background: linear-gradient(to top left , #6499E9 50%,black) ;
 }
 .toprate-body>h2{
     margin: 0;
-    height: 20%;
     padding:1% 0 2% 3%;
     color: white;
     letter-spacing: 4px;
     font-weight: 900;
     font-size: 2rem;
+}
+.rating-list{
+    padding:0 2%;
+    display: grid;
+    grid-template-columns:repeat(3 ,1fr);
+    grid-gap: 2%;
+}
+.top_per_item{
+    height: fit-content;
 }
