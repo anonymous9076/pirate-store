@@ -10,7 +10,7 @@ export default function CartItem({ id, title, NoOfItem,thumbnail, price }) {
     return (
         <div >
             <div className="card rounded-3 mb-4">
-                <div className="card-body p-4">
+                <div className="card-body">
                     <div className="cart_item_img">
                         <img
                             src={thumbnail}

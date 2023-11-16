@@ -81,9 +81,9 @@ function Navbar() {
                     <hr></hr>
                     <ul>
                         <li><Link to='/' style={{textDecoration:'none', color:'white'}}>Home</Link></li>
-                        
                         <li><Link to='/sc' style={{textDecoration:'none', color:'white'}}>Category</Link></li>
-                        <li>Best Seller</li>
+                        <li>Become-Seller</li>
+                        <li>Best Sellers</li>
                         <li>Setting</li>
                     </ul>
                     <h5>Help</h5>

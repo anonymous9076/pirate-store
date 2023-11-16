@@ -1,7 +1,7 @@
 .deals{
     height: fit-content;
     width: 100%;
-    background: linear-gradient(to top left,#6499E9 50%,rgb(38, 38, 38));
+    background-color: rgb(208, 208, 208);
     border-radius: 10px;
     margin: 0 1% 2% 0%;
     position: relative;
@@ -11,10 +11,10 @@
 .deals>h2{
     margin: 0;
     padding:1% 0 2% 3%;
-    color: white;
+    color: rgb(29, 58, 133);
     letter-spacing: 4px;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .deal-list{
     height:100%;
@@ -53,4 +53,21 @@
     color: rgb(216, 216, 216);
     backdrop-filter: blur(5px);
 }
-
+@media screen and (max-width:480px) {
+    .deals>h2{
+        letter-spacing: 2px;
+        font-size: 2.5rem;
+    }
+    .carousel-btns{
+        font-size: 2rem;
+        font-weight: 600;
+        background: none;
+        border: none;
+        color: grey;
+        position: absolute;
+        bottom: 30%;
+        height: 24%;
+        width: 8%;
+        text-align: center;
+    }
+}

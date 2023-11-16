@@ -1,5 +1,4 @@
 .sc {
-    display: flex;
     color: whitesmoke;
     display: grid;
     padding: 2%;
@@ -47,6 +46,24 @@
 }
 
 .sc-filter-reset>button {
+    width: 100%;
+    border-radius: 10px;
+    border-style: none;
+    color: #6499E9;
+    background-color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    box-shadow: 5px 5px 10px 2px rgb(58, 58, 58);
+
+}
+.sc-filter-apply {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.sc-filter-apply>button {
     width: 100%;
     border-radius: 10px;
     border-style: none;
@@ -108,4 +125,63 @@
 #brand:is(:hover) {
     background-color:white;
     color: #6499E9 ;
+}
+.sc_filter_icon{
+    display: none;
+}
+@media screen and (max-width:480px) {
+    .sc {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    .sc-filter {
+        display: block;
+        position: absolute;
+        top:0;
+        width: 96%;
+        z-index: 3;
+        margin: 3% 2%;
+        border-radius: 10px ;
+        background:#3535357e ;
+        padding:3% 10%;
+        backdrop-filter: blur(5px);
+    }
+    .sc-filter>h1{
+        color: rgb(255, 255, 255);
+        font-weight: 900;
+        letter-spacing: 2px;
+        font-size: 2.5rem;
+
+    }
+    .sc-multi-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1%;
+        padding: 2%;
+    }
+    .sc-sort-place {
+        height: 4rem;
+        border-radius: 10px;
+    }
+    .item-sort {
+        position: absolute;
+        right: 18%;
+        width: 10%;
+        height: 50%;
+        top: -15%;
+    }
+    .sc_filter_icon{
+        display: block;
+        position: absolute;
+        right: 31%;
+        height: fit-content;
+        width: 5%;
+        top: 13%;
+        font-size: 1.5rem;
+    }
+    .sc-filter-apply {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+    }
 }

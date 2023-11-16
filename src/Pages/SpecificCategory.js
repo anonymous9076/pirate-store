@@ -4,7 +4,7 @@ import ItemContainer2 from '../Components/ItemContainer2'
 import Navbar from '../Components/Navbar'
 import RatingStars from '../Components/RatingStars'
 import { FilterDataContext } from '../Context/CreateContext'
-import { useNavigate } from 'react-router-dom'
+import { FaFilter } from "react-icons/fa";
 
 function SpecificCategory() {
   const {
@@ -24,11 +24,22 @@ function SpecificCategory() {
     }
     return list
   }
-  const handleNavigation=(id)=>{
-    navigate(`/si/${id}`)
-  }
+  // const handleNavigation=(id)=>{
+  //   navigate(`/si/${id}`)
+  // }
+  const handleApply = () => {
+    console.log('hi')
+    const a = document.querySelector('.sc-filter');
+    if(a){
+    a.style.display = 'none';
+  }}
+  const handleFilterAppear = () => {
+    console.log('hi')
+    const a = document.querySelector('.sc-filter');
+    if(a){
+    a.style.display = 'block';
+  }}
 
-  const navigate = useNavigate()
   const categoryList = getUniqueData(allData, "category")
   const brandList = getUniqueData(filterData, "brand")
   const priceList = getUniqueData(allData, "price")
@@ -82,7 +93,7 @@ function SpecificCategory() {
               <input type='radio' name='price' max={399} min={299} onClick={handleFilterPrice} ></input>
               <label className='mx-2'> 299-399</label>
             </li>
-             <li>
+            <li>
               <input type='radio' name='price' max={499} min={399} onClick={handleFilterPrice} ></input>
               <label className='mx-2'> 399-499</label>
             </li>
@@ -105,6 +116,10 @@ function SpecificCategory() {
               </li>)}
           </ul>
 
+          <div className='sc-filter-apply my-2 mt-4'>
+            <button type='submit' onClick={handleApply}>Apply/Close</button>
+          </div>
+
           <div className='sc-filter-reset my-2 mt-4'>
             <button type='submit' onClick={handleReset}>Reset</button>
           </div>
@@ -114,6 +129,7 @@ function SpecificCategory() {
 
           <div className='sc-sort-place'>
             <span className='item-count'>Available item :{filterData.length}</span>
+            <span title='filter' onClick={handleFilterAppear} className='sc_filter_icon'><FaFilter /></span>
             <span className='item-sort'>
               <label htmlFor='sort'></label>
               <select id='sort' name='sort' onClick={sorting}>

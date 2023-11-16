@@ -43,4 +43,16 @@
     padding-left: 2%;
 }
 
+@media screen and (max-width:480px) {
+    .ic1 {
+        height:12rem;
+        width: 11rem;
+        background-color: rgb(237, 237, 237);
+        border-radius: 10px;
+        padding: 4%;
+        position: relative;
+        z-index: 1;
+    
+    }
+}
 

@@ -8,7 +8,8 @@
     background: linear-gradient(to top,black,#6499E9, black);
     height: 90%;
     width: 30%;
-
+    border-radius: 0 10% 0 10%;
+    box-shadow: 5px 5px 20px 2px rgb(45, 45, 45);
 }
 .spi_heading{
     height: 20%;
@@ -23,7 +24,6 @@
     height: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 4%;
     padding: 4%;
 }
 #no1{
@@ -32,16 +32,40 @@
 }
 @media screen and (max-width:480px){
     .spi_body{
-        height:fit-content;
+        height: fit-content;
         width:100%;
         display: block;
         justify-content:center;
         flex-direction: column;
+        margin: 2% 0;
+        
     }
     .spi_container{
         background: linear-gradient(to top,black,#6499E9, black);
         height: 90%;
         width: 100%;
+        margin: 2% 0;
     
+    }
+    .spi_container_body{
+        height: 80%;
+        display: grid;
+        width: 85%;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        margin: auto;
+        margin-bottom: 2%;
+    }
+    .spi_heading{
+        height:fit-content;
+        width: 100%;
+        padding: 3%;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: white;
+    }
+    .spi_body>.spi_container:nth-child(1){
+        display: none;
     }
 }

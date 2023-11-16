@@ -8,7 +8,6 @@ body {
   cursor: pointer;
   background-color: rgb(220, 220, 220);
   overflow-x: hidden;
-
 }
 
 ::-webkit-scrollbar {
@@ -30,6 +29,6 @@ body {
 
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ef6659;
+  background: #6499E9;
 
 }

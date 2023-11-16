@@ -1,11 +1,11 @@
 
 .card-body>button{
     width: 100%;
-    
 }
 .cart-btn{
     color: white;
     background-color: #6499E9;
+    transform: translate(-2.5%);
 }
 .cart-btn:hover{
     background-color: #6499E9;
@@ -45,4 +45,11 @@
 }
 .cart_shop_btn:hover{
     font-size: 1.2rem;
+}
+@media screen and (max-width:480px) {
+    .total_pay{
+        height:12rem;
+       
+    }
+    
 }

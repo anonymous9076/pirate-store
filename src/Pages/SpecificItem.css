@@ -8,7 +8,6 @@
 .si-img {
     height: 100%;
     width: 70%;
-    /* background-color: rgb(201, 199, 199); */
     border-radius: 10px 0 0 10px;
 
 }
@@ -16,7 +15,6 @@
 .si-thumbnail {
     height: 80%;
     width: 100%;
-    /* background-color: rgb(222, 222, 222); */
     padding: 2%;
     border-radius: 10px;
     box-shadow:inset 0px 0px 10px 1px grey;
@@ -61,7 +59,6 @@
 .si-detail{
     height:fit-content;
     width:30%;
-    /* background-color: rgb(201, 199, 199); */
     padding: 2%;
     border-radius: 0 10px 10px 0;
 
@@ -109,4 +106,19 @@
     display: flex;
     user-select: none;
     margin: 2% 0;
+}
+@media screen and (max-width:480px) {
+    .si-body {
+        display: block;
+    }
+    .si-img {
+        width: 100%;
+    }
+    .si-alt-img {
+        width: 100%;
+    }
+    .si-detail{
+        height:fit-content;
+        width:100%;
+    }
 }

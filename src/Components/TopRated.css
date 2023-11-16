@@ -1,12 +1,13 @@
 .toprate-body{
-    height: 47rem;
+    height: fit-content;
     width: 100%;
-    background: linear-gradient(to top left , #6499E9 50%,black) ;
+    background-color: rgb(208, 208, 208);
+    color: rgb(29, 58, 133);
+
 }
 .toprate-body>h2{
     margin: 0;
     padding:1% 0 2% 3%;
-    color: white;
     letter-spacing: 4px;
     font-weight: 900;
     font-size: 2rem;
@@ -19,4 +20,27 @@
 }
 .top_per_item{
     height: fit-content;
+}
+@media screen and (max-width:480px) {
+
+    .toprate-body{
+    height: fit-content;
+    width: 100%;
+    margin: 2% 0;
+    background-color: rgb(208, 208, 208);
+
+}
+.toprate-body>h2{
+    margin: 0;
+    padding:1% 0 2% 3%;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.rating-list{
+    padding:0 2%;
+    display: grid;
+    grid-template-columns:repeat(2 ,1fr);
+    grid-gap: 2%;
+}
 }
