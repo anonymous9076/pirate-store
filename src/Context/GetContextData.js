@@ -18,7 +18,7 @@ const GetContextData = (props) => {
     async function getdata() {
         dispatch({ type: 'LOADING', payload: '' })
         try {
-            const res = await axios.get('http://localhost:8080/')
+            const res = await axios.get('http://localhost:8080/items')
             let data = await res.data
             dispatch({ type: 'GET_DATA', payload: data })
             dispatch({ type: 'GET_TOP_DATA', payload: data })

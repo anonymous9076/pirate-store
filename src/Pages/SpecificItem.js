@@ -28,8 +28,8 @@ function SpecificItem() {
 
     const [showImg,setShowImg]=useState()
     useEffect(() => {
-        singleItemData(`http://localhost:8080/id=${id}`)
-    }, [])
+        singleItemData(`http://localhost:8080/items/id=${id}`)
+    }, [singleItemData,id])
     
     const handleChangeImg=(p,event)=>{
         event.stopPropagation()
