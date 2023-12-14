@@ -26,17 +26,7 @@ const ProductReducer = (state, action) => {
                 ...state,
                 isLoading: true
             }
-        case "GET_SINGLE_DATA":
-            return{
-                ...state,
-                singleitem:action.payload,
-                isLoading:false
-            }
-        case"ONE_LOADING":
-            return{
-                ...state,
-                isLoading:true
-            }
+      
         default:
             return state;
 

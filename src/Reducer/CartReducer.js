@@ -60,7 +60,7 @@ const CartReducer = (state, action) => {
             }
         case "SET_DEC":
             let curitem = state.cart.map((p) => {
-                if (p.id == action.payload) {
+                if (p.id === action.payload) {
                     let item = p.NoOfItem - 1
                     if (item <= 1) {
                         item = 1;

@@ -102,7 +102,7 @@ export default function FilterDataReducer(state, action) {
                 if (rating !== " ") {
                     return {
                         ...state,
-                        filterData: tempData.filter((p) => Math.round(p.rating) == rating)
+                        filterData: tempData.filter((p) => Math.round(p.rating) === rating)
                     }
                 }
             }
