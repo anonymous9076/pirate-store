@@ -1,10 +1,10 @@
-import { useContext, useReducer, useEffect } from "react";
-import { DataContext, FilterDataContext } from "./CreateContext";
+import { useReducer, useEffect } from "react";
+import { FilterDataContext } from "./CreateContext";
 import reducer from '../Reducer/FilterDataReducer'
+import alldata from '../Database/Data.js'
 
 const FilterContext = (props) => {
-    const data = useContext(DataContext)
-    const orignaldata = data.product
+    const orignaldata = alldata
     let initialState = {
         filterData: [],
         allData: [],
@@ -12,8 +12,8 @@ const FilterContext = (props) => {
         Filter: {
             category: '',
             price: '',
-            brand:'',
-            rating:0,
+            brand: '',
+            rating: 0,
         }
     };
 
@@ -29,9 +29,9 @@ const FilterContext = (props) => {
 
     useEffect(() => {
         dispatch({ type: "FILTER_DATA", payload: orignaldata })
-    }, [state.Filter])
+    }, [state.Filter, orignaldata])
 
-   
+
 
 
     const sorting = (event) => {
@@ -43,43 +43,43 @@ const FilterContext = (props) => {
         dispatch({ type: "RESET_ALL" })
     }
 
-    const handleFilterAll = (event,n,val) => {
+    const handleFilterAll = (event, n, val) => {
         event.stopPropagation()
-        console.log(n,val)
-        if(val){
-            let name=n
-            let value=val
-            dispatch({ type:"UPDATE_FILTER_DATA", payload: { name, value } })
+        console.log(n, val)
+        if (val) {
+            let name = n
+            let value = val
+            dispatch({ type: "UPDATE_FILTER_DATA", payload: { name, value } })
 
         }
-        else{
+        else {
 
-        let name = event.target.name
-        let value = event.target.value
-        dispatch({ type:"UPDATE_FILTER_DATA", payload: { name, value } })
+            let name = event.target.name
+            let value = event.target.value
+            dispatch({ type: "UPDATE_FILTER_DATA", payload: { name, value } })
         }
     }
 
-    const handleBrandFilter=(event)=>{
+    const handleBrandFilter = (event) => {
         event.stopPropagation()
         let value = event.target.value
-        dispatch({ type:"UPDATE_BRAND_DATA", payload: value })
+        dispatch({ type: "UPDATE_BRAND_DATA", payload: value })
 
     }
-    const handleFilterPrice=(event)=>{
+    const handleFilterPrice = (event) => {
         event.stopPropagation()
         let minvalue = event.target.min
         let maxvalue = event.target.max
-        dispatch({ type:"UPDATE_PRICE_DATA", payload: {minvalue,maxvalue} })
-        
+        dispatch({ type: "UPDATE_PRICE_DATA", payload: { minvalue, maxvalue } })
+
     }
-    const handlePrice=(min,max)=>{
-        dispatch({ type:"UPDATE_PRICE_DATA", payload: {min,max} })
+    const handlePrice = (min, max) => {
+        dispatch({ type: "UPDATE_PRICE_DATA", payload: { min, max } })
 
     }
 
     return (
-        <FilterDataContext.Provider value={{ ...state,handlePrice, sorting, handleFilterPrice,handleReset, handleFilterAll,handleBrandFilter }}>
+        <FilterDataContext.Provider value={{ ...state, handlePrice, sorting, handleFilterPrice, handleReset, handleFilterAll, handleBrandFilter }}>
             {props.children}
         </FilterDataContext.Provider>
     )

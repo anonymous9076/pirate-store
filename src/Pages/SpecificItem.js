@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './SpecificItem.css'
 import { NavLink, useParams } from 'react-router-dom'
-import { DataContext } from '../Context/CreateContext.js'
 import RatingStars from '../Components/RatingStars'
 import Navbar from '../Components/Navbar'
 import CartItemBtn from '../Components/CartItemBtn'
