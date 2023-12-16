@@ -1,0 +1,7 @@
+.contact_icons{
+    font-size:2rem ;
+    color:grey
+}
+.contact_icons:hover{
+   color: white;
+}

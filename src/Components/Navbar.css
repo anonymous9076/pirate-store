@@ -280,6 +280,7 @@
         height: 90%;
         width:100%;
         margin: 0;
+        border-radius: 0px;
     }
     #search{
         width: 100%;
@@ -328,16 +329,20 @@
     .nav-menu {
         width: 100%;
         justify-content: center;
-        position: initial;
+        position: relative;
 
     }
     .nav-menu:is(:hover, :focus) .menu-dropdown {
-        left: 67%;
+        left: -500%;
+        z-index: 5;
+      
     }
     .menu-dropdown {
         top: 100%;
         left:100%;
+        height: fit-content;
         transition: left 1s ease-in;
+        
     }
  
     

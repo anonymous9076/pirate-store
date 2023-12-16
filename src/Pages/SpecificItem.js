@@ -6,6 +6,7 @@ import Navbar from '../Components/Navbar'
 import CartItemBtn from '../Components/CartItemBtn'
 import { CartDataContext } from '../Context/CreateContext.js'
 import allData from '../Database/Data.js'
+import Footer from '../Components/Footer'
 
 function SpecificItem() {
 
@@ -85,6 +86,8 @@ function SpecificItem() {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
+
         </div>
     )
 }

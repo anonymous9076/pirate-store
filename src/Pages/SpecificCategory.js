@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar'
 import RatingStars from '../Components/RatingStars'
 import { FilterDataContext } from '../Context/CreateContext'
 import { FaFilter } from "react-icons/fa";
+import Footer from '../Components/Footer'
 
 function SpecificCategory() {
   const {
@@ -158,6 +159,8 @@ function SpecificCategory() {
 
         </div>
       </div>
+      <Footer></Footer>
+
     </>
   )
 }

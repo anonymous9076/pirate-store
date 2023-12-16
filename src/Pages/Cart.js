@@ -4,6 +4,7 @@ import CartItem from '../Components/CartItem'
 import { CartDataContext } from '../Context/CreateContext'
 import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer'
 
 function Cart() {
   const { cart, totalprice } = useContext(CartDataContext)
@@ -45,6 +46,8 @@ function Cart() {
           </div>
         </div>
       </section>
+      <Footer></Footer>
+
     </div>
   )
 }

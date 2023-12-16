@@ -1,8 +1,7 @@
 .carousel {
     background-color: rgb(255, 255, 255);
-    background-size: cover;
+    background-size: contain;
     width: 90%;
-    height: 100%;
     margin: 1% auto;
     border-radius: 20px;
 }
@@ -11,7 +10,9 @@
     border-radius: 20px;
 
 }
-
+.carousel-item>img{
+    height: 25rem;
+}
 @media screen and (max-width:480px) {
     .carousel {
         width: 100%;
