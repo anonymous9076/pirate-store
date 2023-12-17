@@ -54,6 +54,8 @@
         text-align: center;
         position: relative;
         z-index: 1;
+        top: 10%;
+
     }
     .dis_title>h2{
         letter-spacing: 12px;

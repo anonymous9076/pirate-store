@@ -1,15 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState } from 'react'
 import "./Navbar.css"
 import { BsSearch } from 'react-icons/bs'
 import { BiSolidCategory, BiSolidUser, BiMenu } from 'react-icons/bi'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { PiShoppingCartSimpleFill } from 'react-icons/pi'
 import { CartDataContext } from '../Context/CreateContext'
 import { FilterDataContext } from '../Context/CreateContext'
 
 function Navbar() {
     const { cart } = useContext(CartDataContext)
-    const { allData, handleFilterAll } = useContext(FilterDataContext)
+    const navigate=useNavigate()
+    const { allData, handleFilterAll,handleSearch } = useContext(FilterDataContext)
     const getUniqueData = (data, name) => {
         let list = data.map((p) => p[name])
         if (name !== 'price') {
@@ -18,7 +19,15 @@ function Navbar() {
         }
         return list
     }
+    const [text,setText]=useState('')
     const categoryList = getUniqueData(allData, "category")
+    const GoToCategory=()=>{
+        handleSearch(text)
+       navigate('/sc')
+    }
+    const handleText=(e)=>{
+        setText(e.target.value)
+    }
 
     return (
         <div className='navbar'>
@@ -27,8 +36,8 @@ function Navbar() {
 
 
             <div className='nav-searchbar'>
-                <input id='search' type="search" placeholder='Search'></input>
-                <BsSearch id='search-icon'></BsSearch>
+                <input id='search' type="search" value={text} placeholder='Search' onChange={(e)=>handleText(e)}></input>
+                <BsSearch id='search-icon' onClick={GoToCategory}></BsSearch>
             </div>
 
             <div className='nav-category'   >
@@ -36,7 +45,7 @@ function Navbar() {
                 <div className='cat-dropdown'>
                     <ul>
                         {categoryList.map((p) =>
-                            <li onClick={(e) => handleFilterAll(e, 'category', p)} ><Link to='/sc' style={{ textDecoration: 'none', color: 'white' }}>{p}</Link></li>
+                            <li onClick={(e) => handleFilterAll(e, 'category', p)} ><Link to='/sc' style={{ textDecoration: 'none', color: 'white' }}> {p}</Link></li>
                         )}
                     </ul>
                 </div>

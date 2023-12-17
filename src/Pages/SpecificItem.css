@@ -110,6 +110,7 @@
 @media screen and (max-width:480px) {
     .si-body {
         display: block;
+        margin-bottom: 35rem;
     }
     .si-img {
         width: 100%;

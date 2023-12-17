@@ -3,6 +3,8 @@
     display: grid;
     padding: 2%;
     grid-template-columns: 0.2fr 1fr;
+    height: max-content;
+    margin-bottom: 12rem;
 }
 
 .sc-filter {
@@ -33,6 +35,7 @@
 }
 
 .sc-multi-item {
+    height: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1%;
@@ -133,6 +136,7 @@
     .sc {
         grid-template-columns: 1fr;
         position: relative;
+        margin-bottom: 45rem;
     }
     .sc-filter {
         display: block;
@@ -165,7 +169,7 @@
     }
     .item-sort {
         position: absolute;
-        right: 18%;
+        right: 25%;
         width: 10%;
         height: 50%;
         top: -15%;
@@ -173,7 +177,7 @@
     .sc_filter_icon{
         display: block;
         position: absolute;
-        right: 31%;
+        right: 40%;
         height: fit-content;
         width: 5%;
         top: 13%;
@@ -183,5 +187,16 @@
         width: 100%;
         border-radius: 10px;
         display: block;
+    }
+    #sort {
+        background-color: white;
+        color: #6499E9;
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        height: 100%;
+        text-align: center;
+        font-weight: 600;
+        padding:0 10%;
     }
 }

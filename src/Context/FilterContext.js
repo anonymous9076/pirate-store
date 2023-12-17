@@ -77,9 +77,13 @@ const FilterContext = (props) => {
         dispatch({ type: "UPDATE_PRICE_DATA", payload: { min, max } })
 
     }
+    //   handle search text
+    const  handleSearch=(text)=>{   
+        dispatch({ type: 'GET_SEARCH', payload: text })
+    }
 
     return (
-        <FilterDataContext.Provider value={{ ...state, handlePrice, sorting, handleFilterPrice, handleReset, handleFilterAll, handleBrandFilter }}>
+        <FilterDataContext.Provider value={{ ...state, handlePrice, sorting,handleSearch, handleFilterPrice, handleReset, handleFilterAll, handleBrandFilter }}>
             {props.children}
         </FilterDataContext.Provider>
     )

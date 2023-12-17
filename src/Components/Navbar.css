@@ -280,7 +280,6 @@
         height: 90%;
         width:100%;
         margin: 0;
-        border-radius: 0px;
     }
     #search{
         width: 100%;
@@ -311,15 +310,15 @@
         place-items: center;
         margin-top: 20%;
         position: initial;
-        transition: right 0.5s ease-in;
+        transition: right 0.5s linear;
     }
     .nav-user:is(:hover, :focus) .user-dropdown {
-        left: 60%;
+        left:12rem;
     
     }
     .user-dropdown {
         top: 100%;
-        left: 100%;
+        left:-12rem;
     }
     .yellow{
         height: 3rem;
@@ -333,16 +332,16 @@
 
     }
     .nav-menu:is(:hover, :focus) .menu-dropdown {
-        left: -500%;
+        right:0%;
         z-index: 5;
       
     }
     .menu-dropdown {
         top: 100%;
-        left:100%;
-        height: fit-content;
-        transition: left 1s ease-in;
-        
+        right:30rem;
+        height: 40rem;
+        transition: right .5s linear;
+        scroll-behavior: smooth;
     }
  
     

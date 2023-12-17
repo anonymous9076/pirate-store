@@ -79,6 +79,11 @@ export default function FilterDataReducer(state, action) {
                     [name]: value
                 }
             }
+        case "GET_SEARCH":
+            return{
+                ...state,
+                filterData:state.allData.filter((p)=>p.title.toLowerCase().includes(action.payload))
+            }    
 
 
         case "FILTER_DATA":

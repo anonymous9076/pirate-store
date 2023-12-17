@@ -8,18 +8,6 @@
     position: relative;
     overflow: hidden;
 }
-/* .ic2::before{
-    content: '';
-    height:inherit;
-    width:inherit;
-    position: absolute;
-    z-index: 1;
-    background: rgba(0,0,0,0.5);
-    top: 0;
-    right: 100%;
-    border-radius: inherit;
-    transition:right .8s  ;
-} */
 
 .ic2-img {
     height: 70%;
@@ -94,4 +82,9 @@
     transform: scale(1.2);
     border-radius: 10px;
     
+}
+@media screen and (max-width:480px){
+    .ic2-price>div>strike{
+        display: none;
+    }
 }

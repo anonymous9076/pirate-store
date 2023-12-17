@@ -7,6 +7,7 @@ const ProductReducer = (state, action) => {
                 product: action.payload,
                 isLoading:false
             }
+       
         case "GET_TOP_DATA":
             return {
                 ...state,

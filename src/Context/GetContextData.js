@@ -10,7 +10,7 @@ const GetContextData = (props) => {
         sorteditem: [],
         isLoading: false,
         isError: false,
-       
+        search:'',
         toprated: []
     }
     const [state, dispatch] = useReducer(reducer, initializer);
@@ -31,22 +31,10 @@ const GetContextData = (props) => {
         getdata();
     }, [])
 
-    // function singleItemData(id) {
-    //     dispatch({ type: 'ONE_LOADING', payload: '' })
-    //     try {
-    //         dispatch({ type: 'GET_SINGLE_DATA', payload: id })
-    //     }
-    //     catch (error) {
-    //         dispatch({ type: 'GET_ERROR', payload: error })
-    //     }
-    // }
-    // useEffect(() => {
-    //     singleItemData();
-    // }, [])
-
-
+  
+ 
     return (
-        <DataContext.Provider value={{ ...state }}>
+        <DataContext.Provider value={{ ...state,  }}>
             {props.children}
         </DataContext.Provider>
     )

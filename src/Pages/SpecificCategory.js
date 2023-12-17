@@ -29,14 +29,14 @@ function SpecificCategory() {
   //   navigate(`/si/${id}`)
   // }
   const handleApply = () => {
-    console.log('hi')
     const a = document.querySelector('.sc-filter');
     if(a){
     a.style.display = 'none';
   }}
-  const handleFilterAppear = () => {
-    console.log('hi')
+  const handleFilterAppear = (e) => {
+    e.stopPropagation()
     const a = document.querySelector('.sc-filter');
+    e.preventDefault()
     if(a){
     a.style.display = 'block';
   }}
@@ -130,7 +130,7 @@ function SpecificCategory() {
 
           <div className='sc-sort-place'>
             <span className='item-count'>Available item :{filterData.length}</span>
-            <span title='filter' onClick={handleFilterAppear} className='sc_filter_icon'><FaFilter /></span>
+            <span title='filter' onClick={(e)=>handleFilterAppear(e)} className='sc_filter_icon'><FaFilter /></span>
             <span className='item-sort'>
               <label htmlFor='sort'></label>
               <select id='sort' name='sort' onClick={sorting}>
